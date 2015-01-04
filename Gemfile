@@ -25,12 +25,22 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'devise'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'acts_as_list'
+
+#gem 'inherited_resources', github: 'codecraft63/inherited_resources', branch: 'master'
+gem 'inherited_resources', github: 'josevalim/inherited_resources', branch: 'rails-4-2'
+
+gem 'responders', '~> 2.0'
+
+gem 'activeadmin', github: 'lazaronixon/activeadmin', branch: 'master'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,0 +1,50 @@
+<div class="register_account">
+
+    <div class="wrap">
+        <h4 class="title">Create an Account</h4>
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+
+          <div class="col_1_of_2 span_1_of_2", style="margin-left: 0;">
+
+            <div class="field">
+              <%= f.text_field :first_name, autofocus: true, value: "First Name", onfocus: "this.value = '';", onblur: "if (this.value == '') {this.value = 'First Name';}" %>
+            </div>
+
+            <div class="field">
+              <%= f.text_field :last_name, value: "Last Name", onfocus: "this.value = '';", onblur: "if (this.value == '') {this.value = 'Last Name';}" %>
+            </div>
+
+            <div class="field">
+            <%= f.email_field :email, value: "your-email-address@domain.com", onfocus: "this.value = '';", onblur: "if (this.value == '') {this.value = 'your-email-address@domain.com';}" %>
+            </div>
+
+            <div class="actions">
+                <%= f.button "Sign up", class: 'grey' %>
+                <p class="terms">By clicking 'Create Account' you agree to the <a href="#">Terms &amp; Conditions</a>.</p>
+            </div>
+
+          </div>
+
+          <div class="col_1_of_2 span_1_of_2">
+
+            <div class="field">
+              <%= f.password_field :password, autocomplete: "off" %>
+              <p class="code">Enter your password here</p>
+            </div>
+
+            <div class="field">
+              <%= f.password_field :password_confirmation, autocomplete: "off"%>
+              <p class="code">Repeat your password, please</p>
+            </div>
+
+          </div>
+
+          <div class="clear"></div>
+
+        <% end %>
+
+    </div>
+
+</div>

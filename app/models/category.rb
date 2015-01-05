@@ -7,5 +7,10 @@ class Category < ActiveRecord::Base
 
   scope :sorted, -> { order(:position) }
 
+  before_create :set_position
+
+  def set_position
+    self.position = Category.maximum(:position) + 1
+  end
 
 end

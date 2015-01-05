@@ -3,7 +3,17 @@ ActiveAdmin.register Category do
   config.sort_order = 'position_asc'
 
   index do
-    column :name
+    column :name do |this|
+      link_to this.name, admin_category_path(this)
+    end
+  end
+
+  form do |f|
+    f.semantic_errors *f.object.errors.keys
+    f.inputs 'Category' do
+      f.input :name
+    end
+    f.actions
   end
 
   collection_action :sort, :method => :post do

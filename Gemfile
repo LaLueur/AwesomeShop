@@ -41,6 +41,12 @@ gem 'responders', '~> 2.0'
 
 gem 'activeadmin', github: 'lazaronixon/activeadmin', branch: 'master'
 
+gem 'carrierwave'
+
+gem 'rmagick'
+
+gem 'cloudinary'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

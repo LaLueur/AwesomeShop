@@ -12,4 +12,9 @@ class Product < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
+
+  def display_price(currency = nil)
+    '$' + self.price.to_s if currency.nil?
+  end
+
 end

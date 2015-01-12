@@ -1,838 +1,266 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Free Adidas Website Template | Home :: w3layouts</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width" />
+  <title>BestShop</title>
+
+  <!-- Font CSS Link -->
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <!-- Font CSS Link -->
+
+
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <script type="text/javascript">
-      $(document).ready(function() {
-          $(".dropdown img.flag").addClass("flagvisibility");
-
-          $(".dropdown dt a").click(function() {
-              $(".dropdown dd ul").toggle();
-          });
-
-          $(".dropdown dd ul li a").click(function() {
-              var text = $(this).html();
-              $(".dropdown dt a span").html(text);
-              $(".dropdown dd ul").hide();
-              $("#result").html("Selected value is: " + getSelectedValue("sample"));
-          });
-
-          function getSelectedValue(id) {
-              return $("#" + id).find("dt a span.value").html();
-          }
-
-          $(document).bind('click', function(e) {
-              var $clicked = $(e.target);
-              if (! $clicked.parents().hasClass("dropdown"))
-                  $(".dropdown dd ul").hide();
-          });
-
-
-          $("#flagSwitcher").click(function() {
-              $(".dropdown img.flag").toggleClass("flagvisibility");
-          });
-      });
-  </script>
-  <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
-  <script type="text/javascript">
-      jQuery(document).ready(function($) {
-          $(".scroll").click(function(event){
-              event.preventDefault();
-              $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-          });
-      });
-  </script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="header-top">
-  <div class="wrap">
-    <div class="logo">
-      <a href="index.html"><img src="/assets/logo.png" alt=""/></a>
-    </div>
-    <div class="cssmenu">
-      <div id="user_nav">
-        <% if user_signed_in? %>
-            Logged in as <strong><%= current_user.email %></strong>.
-            <%= link_to 'Edit profile', edit_user_registration_path %> |
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-        <% else %>
-            <%= link_to "Sign up", new_user_registration_path %> |
-            <%= link_to "Login", new_user_session_path %>
-        <% end %>
-      </div>
-    </div>
-    <ul class="icon2 sub-icon2 profile_img">
-      <li><a class="active-icon c2" href="#"> </a>
-        <ul class="sub-icon2 list">
-          <li><h3>Products</h3><a href=""></a></li>
-          <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-        </ul>
-      </li>
-    </ul>
-    <div class="clear"></div>
-  </div>
-</div>
-<div class="header-bottom">
-  <div class="wrap">
-    <!-- start header menu -->
-    <ul class="megamenu skyblue">
-      <li><a class="color1" href="#">Home</a></li>
-      <li class="grid"><a class="color2" href="#">Men</a>
-        <div class="megapanel">
-          <div class="row">
-            <div class="col1">
-              <div class="h_nav">
-                <h4>popular</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">login</a></li>
-                </ul>
-              </div>
-              <div class="h_nav">
-                <h4 class="top">men</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>style zone</h4>
-                <ul>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">brands</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-            <img src="/assets/nav_img.jpg" alt=""/>
-          </div>
-        </div>
-      </li>
-      <li class="active grid"><a class="color4" href="#">Women</a>
-        <div class="megapanel">
-          <div class="row">
-            <div class="col1">
-              <div class="h_nav">
-                <h4>shop</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">brands</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>help</h4>
-                <ul>
-                  <li><a href="#">trends</a></li>
-                  <li><a href="#">sale</a></li>
-                  <li><a href="#">style videos</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>my company</h4>
-                <ul>
-                  <li><a href="#">trends</a></li>
-                  <li><a href="#">sale</a></li>
-                  <li><a href="#">style videos</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>account</h4>
-                <ul>
-                  <li><a href="#">login</a></li>
-                  <li><a href="#">create an account</a></li>
-                  <li><a href="#">create wishlist</a></li>
-                  <li><a href="#">my shopping bag</a></li>
-                  <li><a href="#">brands</a></li>
-                  <li><a href="#">create wishlist</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>popular</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <img src="/assets/nav_img1.jpg" alt=""/>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col2"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-          </div>
-        </div>
-      </li>
-      <li><a class="color5" href="#">Kids</a>
-        <div class="megapanel">
-          <div class="row">
-            <div class="col1">
-              <div class="h_nav">
-                <h4>popular</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">login</a></li>
-                </ul>
-              </div>
-              <div class="h_nav">
-                <h4 class="top">man</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>style zone</h4>
-                <ul>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">brands</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-            <img src="/assets/nav_img2.jpg" alt=""/>
-          </div>
-        </div>
-      </li>
-      <li><a class="color6" href="#">Sale</a>
-        <div class="megapanel">
-          <div class="row">
-            <div class="col1">
-              <div class="h_nav">
-                <h4>shop</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">brands</a></li>
-                </ul>
-              </div>
-              <div class="h_nav">
-                <h4 class="top">my company</h4>
-                <ul>
-                  <li><a href="#">trends</a></li>
-                  <li><a href="#">sale</a></li>
-                  <li><a href="#">style videos</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>man</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>help</h4>
-                <ul>
-                  <li><a href="#">trends</a></li>
-                  <li><a href="#">sale</a></li>
-                  <li><a href="#">style videos</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>account</h4>
-                <ul>
-                  <li><a href="#">login</a></li>
-                  <li><a href="#">create an account</a></li>
-                  <li><a href="#">create wishlist</a></li>
-                  <li><a href="#">my shopping bag</a></li>
-                  <li><a href="#">brands</a></li>
-                  <li><a href="#">create wishlist</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>my company</h4>
-                <ul>
-                  <li><a href="#">trends</a></li>
-                  <li><a href="#">sale</a></li>
-                  <li><a href="#">style videos</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>popular</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col2"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-          </div>
-        </div>
-      </li>
-      <li><a class="color7" href="#">Customize</a>
-        <div class="megapanel">
-          <div class="row">
-            <div class="col1">
-              <div class="h_nav">
-                <h4>shop</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">brands</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>help</h4>
-                <ul>
-                  <li><a href="#">trends</a></li>
-                  <li><a href="#">sale</a></li>
-                  <li><a href="#">style videos</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>my company</h4>
-                <ul>
-                  <li><a href="#">trends</a></li>
-                  <li><a href="#">sale</a></li>
-                  <li><a href="#">style videos</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>account</h4>
-                <ul>
-                  <li><a href="#">login</a></li>
-                  <li><a href="#">create an account</a></li>
-                  <li><a href="#">create wishlist</a></li>
-                  <li><a href="#">my shopping bag</a></li>
-                  <li><a href="#">brands</a></li>
-                  <li><a href="#">create wishlist</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>my company</h4>
-                <ul>
-                  <li><a href="#">trends</a></li>
-                  <li><a href="#">sale</a></li>
-                  <li><a href="#">style videos</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>popular</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col2"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-          </div>
-        </div>
-      </li>
-      <li><a class="color8" href="#">Shop</a>
-        <div class="megapanel">
-          <div class="row">
-            <div class="col1">
-              <div class="h_nav">
-                <h4>style zone</h4>
-                <ul>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">brands</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>popular</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">login</a></li>
-                </ul>
-              </div>
-              <div class="h_nav">
-                <h4 class="top">man</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-              <div class="col1"></div>
-              <div class="col1"></div>
-              <div class="col1"></div>
-              <div class="col1"></div>
-            </div>
-          </div>
-      </li>
-      <li><a class="color9" href="#">Football</a>
-        <div class="megapanel">
-          <div class="row">
-            <div class="col1">
-              <div class="h_nav">
-                <h4>shop</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">brands</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>help</h4>
-                <ul>
-                  <li><a href="#">trends</a></li>
-                  <li><a href="#">sale</a></li>
-                  <li><a href="#">style videos</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>my company</h4>
-                <ul>
-                  <li><a href="#">trends</a></li>
-                  <li><a href="#">sale</a></li>
-                  <li><a href="#">style videos</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>account</h4>
-                <ul>
-                  <li><a href="#">login</a></li>
-                  <li><a href="#">create an account</a></li>
-                  <li><a href="#">create wishlist</a></li>
-                  <li><a href="#">my shopping bag</a></li>
-                  <li><a href="#">brands</a></li>
-                  <li><a href="#">create wishlist</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>my company</h4>
-                <ul>
-                  <li><a href="#">trends</a></li>
-                  <li><a href="#">sale</a></li>
-                  <li><a href="#">style videos</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col1">
-              <div class="h_nav">
-                <h4>popular</h4>
-                <ul>
-                  <li><a href="#">new arrivals</a></li>
-                  <li><a href="#">men</a></li>
-                  <li><a href="#">women</a></li>
-                  <li><a href="#">accessories</a></li>
-                  <li><a href="#">kids</a></li>
-                  <li><a href="#">style videos</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col2"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-            <div class="col1"></div>
-          </div>
-        </div>
-      </li>
-      <li><a class="color10" href="#">Running</a></li>
-      <li><a class="color11" href="#">Originals</a></li>
-      <li><a class="color12" href="#">Basketball</a></li>
-    </ul>
-    <div class="clear"></div>
-  </div>
-</div>
 
-
-<%= yield %>
-
-
-
-
-<div class="footer">
-  <div class="footer-top">
-    <div class="wrap">
-      <div class="col_1_of_footer-top span_1_of_footer-top">
-        <ul class="f_list">
-          <li><img src="/assets/f_icon.png" alt=""/><span class="delivery">Free delivery on all orders over £100*</span></li>
-        </ul>
-      </div>
-      <div class="col_1_of_footer-top span_1_of_footer-top">
-        <ul class="f_list">
-          <li><img src="/assets/f_icon1.png" alt=""/><span class="delivery">Customer Service :<span class="orange"> (800) 000-2587 (freephone)</span></span></li>
-        </ul>
-      </div>
-      <div class="col_1_of_footer-top span_1_of_footer-top">
-        <ul class="f_list">
-          <li><img src="/assets/f_icon2.png" alt=""/><span class="delivery">Fast delivery & free returns</span></li>
-        </ul>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <div class="footer-middle">
-    <div class="wrap">
-      <div class="section group">
-        <div class="col_1_of_middle span_1_of_middle">
-          <dl id="sample" class="dropdown">
-            <dt><a href="#"><span>Please Select a Country</span></a></dt>
-            <dd>
-              <ul>
-                <li><a href="#">Australia<img class="flag" src="/assets/as.png" alt="" /><span class="value">AS</span></a></li>
-                <li><a href="#">Sri Lanka<img class="flag" src="/assets/srl.png" alt="" /><span class="value">SL</span></a></li>
-                <li><a href="#">Newziland<img class="flag" src="/assets/nz.png" alt="" /><span class="value">NZ</span></a></li>
-                <li><a href="#">Pakistan<img class="flag" src="/assets/pk.png" alt="" /><span class="value">Pk</span></a></li>
-                <li><a href="#">United Kingdom<img class="flag" src="/assets/uk.png" alt="" /><span class="value">UK</span></a></li>
-                <li><a href="#">United States<img class="flag" src="/assets/us.png" alt="" /><span class="value">US</span></a></li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
-        <div class="col_1_of_middle span_1_of_middle">
-          <ul class="f_list1">
-            <li><span class="m_8">Sign up for email and Get 15% off</span>
-              <div class="search">
-                <input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-                <input type="submit" value="Subscribe" id="submit" name="submit">
-                <div id="response"> </div>
-              </div><div class="clear"></div>
-            </li>
+<div class="header">
+  <div class="container main">
+    <div class="row">
+      <div class="header_top">
+        <div class="currency_translator span5">
+          <div class="currency">
+            CURRENCY:
+            <select class="select_bg">
+              <option value="dollar">DOLLAR</option>
+              <option value="euro">EURO</option>
+              <option value="taka">TAKA</option>
+              <option value="rupe">RUPE</option>
+            </select>
+          </div>
+          <ul class="translator">
+            <li class="en"><a class="active" href="#">EN</a></li>
+            <li class="en"><a href="#">ES</a></li>
+            <li class="en"><a href="#">FR</a></li>
           </ul>
         </div>
-        <div class="clear"></div>
+        <div class="account_login span7">
+
+          <ul class="account_info">
+            <li><a href="#"><img alt="" src="/assets/my_account.png"> MY ACCOUNT</a></li>
+            <li><a href="wish_list.html"><img alt="" src="/assets/mywish_list.png"> MY WISHLIST</a></li>
+            <li><a href="cart.html"><img alt="" src="/assets/shopping_cart.png"> MY CART</a></li>
+            <li><a href="checkout.html"><img alt="" src="/assets/checkout.png"> MY CHECKOUT</a></li>
+            <li><a href="log_in.html"><img alt="" src="/assets/log_out.png"> LOGIN</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="header_top">
+        <div class="span4">
+          <a href="index-2.html">
+            <div class="logo"></div>
+          </a>
+        </div>
+        <div class="call_info span4">
+          <p>PHONE: <span class="color">1 (234) 56 78 901</span></p>
+          <p>Call us Monday - Saturday: 9:00 am - 6:00 pm</p>
+        </div>
+        <div class="cart_info span3">
+          <div class="cart_data">Shopping Cart - $0.00</div>
+          <button class="cart_btn btn btn-navbar" data-toggle="collapse" data-target=".item_cart_wrap"><img alt="" src="/assets/shopping_cart_btn_img.png"></button>
+          <div class="item_cart_content">
+            <div class="item_cart_wrap collapse">
+              <div class="item_cart">
+                <p class="item_cart_products">No Products</p>
+                <p class="item_cart_info">Shipping - $0.00</p>
+                <p class="item_cart_info">Total - $0.00</p>
+                <button class="checkout">Checkout</button>
+                <button class="cart">Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="navigation navbar">
+
+  <div class="row">
+    <div class="navbar">
+      <div class="container main">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <!-- Be sure to leave the brand out there if you want it shown -->
+
+        <!-- Everything you want hidden at 940px or less, place within here -->
+        <div class="nav-collapse collapse">
+          <!-- .nav, .navbar-search, .navbar-form, etc -->
+          <ul class="sf-menu">
+            <li><a href="index-2.html">Home</a></li>
+            <li class="deeper parent current">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Men
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="men.html">Dresses</a></li>
+                <li><a href="product_details_men.html">Product Details</a></li>
+              </ul>
+            </li>
+            <li class="deeper parent dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Women
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="grid.html">Dresses</a></li>
+                <li><a href="bag.html">Bags</a></li>
+                <li><a href="beautiful.html" >Beauty</a></li>
+                <li><a href="bikini.html">Bikini</a></li>
+                <li><a href="nightwear.html">Nightwear</a></li>
+                <li><a href="club.html" >Club</a></li>
+                <li><a href="doll.html">Doll</a></li>
+                <li><a href="product_details_women.html">Product Details</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Kids
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="kid.html">Dresses</a></li>
+                <li><a href="product_details_kid.html">Product Details</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Blogs</a>
+              <ul class="dropdown-menu">
+                <li><a href="blog.html">Blog View</a></li>
+                <li><a href="single.html">Single View</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Styles</a>
+              <ul class="dropdown-menu">
+                <li><a href="index-2.html">Red</a></li>
+                <li><a href="http://demo.webpentagon.com/themeforest/html/bestshop_green/index.html">Green</a></li>
+                <li><a href="http://demo.webpentagon.com/themeforest/html/bestshop_orange/index.html">Orenge</a></li>
+                <li><a href="http://demo.webpentagon.com/themeforest/html/bestshop_purple/index.html">Purple</a></li>
+                <li><a href="http://demo.webpentagon.com/themeforest/html/bestshop_brown/index.html">Brown</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="search">
+            <input type="search" name="search" placeholder="search">
+            <button class="search_btn">
+              <img alt="" src="/assets/icon_search.png">
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="breadcrumbs">
+  <div class="container main">
+    <ul>
+      <li><a href="#">Home</a></li><li>&#47;</li><li class="active"><a href="#">Men</a></li>
+    </ul>
+  </div>
+</div>
+<%= yield %>
+<div class="footer">
+  <div class="footer-top">
+    <div class="container main" id="footer-top">
+
+      <div class="row">
+        <div class="span3 footer-col">
+          <div class="widget-info">
+            <div class="widget-title">Information</div>
+            <div class="line"></div>
+            <div class="widget-content">
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Site Map</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="span3 footer-col">
+          <div class="widget-info">
+            <div class="widget-title">Why Buy From Us</div>
+            <div class="line"></div>
+            <div class="widget-content">
+              <ul>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Secure Shopping</a></li>
+                <li><a href="#">International Shipping</a></li>
+                <li><a href="#">Affiliates</a></li>
+                <li><a href="#">Group Sales</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="span3 footer-col">
+          <div class="widget-info">
+            <div class="widget-title">My Account</div>
+            <div class="line"></div>
+            <div class="widget-content">
+              <ul>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">My Wishlist</a></li>
+                <li><a href="#">Track My Order</a></li>
+                <li><a href="#">Help</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="span3 footer-col">
+          <div class="widget-info">
+            <div class="widget-title">Newsletter</div>
+            <div class="line"></div>
+            <div class="widget-content">
+              <input type="text" name="mail" placeholder="Your E-mail Address">
+              <button class="go_btn">Go</button>
+              <br/>
+              <p>Store Location: <span>8601 Creat Labaratory, New York, D05 86GR</span></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="wrap">
-      <div class="section group">
-        <div class="col_1_of_5 span_1_of_5">
-          <h3 class="m_9">Shop</h3>
-          <ul class="sub_list">
-            <h4 class="m_10">Men</h4>
-            <li><a href="#">Men's Shoes</a></li>
-            <li><a href="#">Men's Clothing</a></li>
-            <li><a href="#">Men's Accessories</a></li>
-          </ul>
-          <ul class="sub_list">
-            <h4 class="m_10">Women</h4>
-            <li><a href="#">Women's Shoes</a></li>
-            <li><a href="#">Women's Clothing</a></li>
-            <li><a href="#">Women's Accessories</a></li>
-          </ul>
-          <ul class="sub_list">
-            <h4 class="m_10">Kids</h4>
-            <li><a href="#">Kids Shoes</a></li>
-            <li><a href="#">Kids Clothing</a></li>
-            <li><a href="#">Kids Accessories</a></li>
-          </ul>
-          <ul class="sub_list">
-            <h4 class="m_10">style</h4>
-            <li><a href="#">Porsche Design Sport</a></li>
-            <li><a href="#">Porsche Design Shoes</a></li>
-            <li><a href="#">Porsche Design Clothing</a></li>
-          </ul>
-          <ul class="sub_list">
-            <h4 class="m_10">Adidas Neo Label</h4>
-            <li><a href="#">Adidas NEO Shoes</a></li>
-            <li><a href="#">Adidas NEO Clothing</a></li>
-          </ul>
-          <ul class="sub_list1">
-            <h4 class="m_10">Customise</h4>
-            <li><a href="#">mi adidas</a></li>
-            <li><a href="#">mi team</a></li>
-            <li><a href="#">new arrivals</a></li>
+    <div class="container main" id="footer-bottom">
+      <div class="row">
+        <div class="span8 footer-col">
+          Copyright &#169; 2013 <a href="#">Fedimo</a>. All rights reserved.
+        </div>
+        <div class="span4 footer-col">
+          <ul>
+            <li><a href="#"><img alt="" src="/assets/payment-getway/1.png"></a></li>
+            <li><a href="#"><img alt="" src="/assets/payment-getway/2.png"></a></li>
+            <li><a href="#"><img alt="" src="/assets/payment-getway/3.png"></a></li>
+            <li><a href="#"><img alt="" src="/assets/payment-getway/4.png"></a></li>
+            <li><a href="#"><img alt="" src="/assets/payment-getway/5.png"></a></li>
           </ul>
         </div>
-        <div class="col_1_of_5 span_1_of_5">
-          <h3 class="m_9">Sports</h3>
-          <ul class="list1">
-            <li><a href="#">Basketball</a></li>
-            <li><a href="#">Football</a></li>
-            <li><a href="#">Football Boots</a></li>
-            <li><a href="#">Predator</a></li>
-            <li><a href="#">F50</a></li>
-            <li><a href="#">Football Clothing</a></li>
-            <li><a href="#">Golf</a></li>
-            <li><a href="#">Golf Shoes</a></li>
-            <li><a href="#">Golf Clothing</a></li>
-            <li><a href="#">Outdoor</a></li>
-            <li><a href="#">Outdoor Shoes</a></li>
-            <li><a href="#">Outdoor Clothing</a></li>
-            <li><a href="#">Rugby</a></li>
-            <li><a href="#">Running</a></li>
-            <li><a href="#">Running Shoes</a></li>
-            <li><a href="#">Boost</a></li>
-            <li><a href="#">Supernova</a></li>
-            <li><a href="#">Running Clothing</a></li>
-            <li><a href="#">Swimming</a></li>
-            <li><a href="#">Tennis</a></li>
-            <li><a href="#">Tennis Shoes</a></li>
-            <li><a href="#">Tennis Clothing</a></li>
-            <li><a href="#">Training</a></li>
-            <li><a href="#">Training Shoes</a></li>
-            <li><a href="#">Training Clothing</a></li>
-            <li><a href="#">Training Accessories</a></li>
-            <li><a href="#">miCoach</a></li>
-            <li><a href="#">All Sports</a></li>
-          </ul>
-        </div>
-        <div class="col_1_of_5 span_1_of_5">
-          <h3 class="m_9">Originals</h3>
-          <ul class="list1">
-            <li><a href="#">Originals Shoes</a></li>
-            <li><a href="#">Gazelle</a></li>
-            <li><a href="#">Samba</a></li>
-            <li><a href="#">LA Trainer</a></li>
-            <li><a href="#">Superstar</a></li>
-            <li><a href="#">SL</a></li>
-            <li><a href="#">ZX</a></li>
-            <li><a href="#">Campus</a></li>
-            <li><a href="#">Spezial</a></li>
-            <li><a href="#">Dragon</a></li>
-            <li><a href="#">Originals Clothing</a></li>
-            <li><a href="#">Firebird</a></li>
-            <li><a href="#">Originals Accessories</a></li>
-            <li><a href="#">Men's Originals</a></li>
-            <li><a href="#">Women's Originals</a></li>
-            <li><a href="#">Kid's Originals</a></li>
-            <li><a href="#">All Originals</a></li>
-          </ul>
-        </div>
-        <div class="col_1_of_5 span_1_of_5">
-          <h3 class="m_9">Product Types</h3>
-          <ul class="list1">
-            <li><a href="#">Shirts</a></li>
-            <li><a href="#">Pants & Tights</a></li>
-            <li><a href="#">Shirts</a></li>
-            <li><a href="#">Jerseys</a></li>
-            <li><a href="#">Hoodies & Track Tops</a></li>
-            <li><a href="#">Bags</a></li>
-            <li><a href="#">Jackets</a></li>
-            <li><a href="#">Hi Tops</a></li>
-            <li><a href="#">SweatShirts</a></li>
-            <li><a href="#">Socks</a></li>
-            <li><a href="#">Swimwear</a></li>
-            <li><a href="#">Tracksuits</a></li>
-            <li><a href="#">Hats</a></li>
-            <li><a href="#">Football Boots</a></li>
-            <li><a href="#">Other Accessories</a></li>
-            <li><a href="#">Sandals & Flip Flops</a></li>
-            <li><a href="#">Skirts & Dresseses</a></li>
-            <li><a href="#">Balls</a></li>
-            <li><a href="#">Watches</a></li>
-            <li><a href="#">Fitness Equipment</a></li>
-            <li><a href="#">Eyewear</a></li>
-            <li><a href="#">Gloves</a></li>
-            <li><a href="#">Sports Bras</a></li>
-            <li><a href="#">Scarves</a></li>
-            <li><a href="#">Shinguards</a></li>
-            <li><a href="#">Underwear</a></li>
-          </ul>
-        </div>
-        <div class="col_1_of_5 span_1_of_5">
-          <h3 class="m_9">Support</h3>
-          <ul class="list1">
-            <li><a href="#">Store finder</a></li>
-            <li><a href="#">Customer Service</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Online Shop Contact Us</a></li>
-            <li><a href="#">about adidas Products</a></li>
-            <li><a href="#">Size Charts </a></li>
-            <li><a href="#">Ordering </a></li>
-            <li><a href="#">Payment </a></li>
-            <li><a href="#">Shipping </a></li>
-            <li><a href="#">Returning</a></li>
-            <li><a href="#">Using out Site</a></li>
-            <li><a href="#">Delivery Terms</a></li>
-            <li><a href="#">Site Map</a></li>
-            <li><a href="#">Gift Card</a></li>
-
-          </ul>
-          <ul class="sub_list2">
-            <h4 class="m_10">Company Info</h4>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Press</a></li>
-          </ul>
-        </div>
-        <div class="clear"></div>
       </div>
     </div>
   </div>
-  <div class="copy">
-    <div class="wrap">
-      <p>© All rights reserved | Template by&nbsp;<a href="http://w3layouts.com/"> W3Layouts</a></p>
-    </div>
-  </div>
 </div>
-<script type="text/javascript">
-    $(document).ready(function() {
 
-        var defaults = {
-            containerID: 'toTop', // fading element id
-            containerHoverID: 'toTopHover', // fading element hover id
-            scrollSpeed: 1200,
-            easingType: 'linear'
-        };
-
-
-        $().UItoTop({ easingType: 'easeOutQuart' });
-
-    });
-</script>
-<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
 
 </body>
 </html>

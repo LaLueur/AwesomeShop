@@ -1,0 +1,167 @@
+/*-------------------------------------
+	MENU
+-------------------------------------*/
+
+ul.sf-menu {
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	border-right: 1px solid #cecece;
+}
+
+ul.sf-menu > li {
+	margin: 0;
+}
+
+ul.sf-menu li a,
+ul.sf-menu li span {
+	display: block;
+	padding: 0 1em;
+	font: 12px/32px 'Cabin', sans-serif;
+	text-transform: uppercase;
+}
+
+ul.sf-menu > li > a,
+ul.sf-menu > li > span {
+	padding: 0 31px;
+	font-family:Oswald;
+	font-size:13px;
+	height: 50px;
+	color: #696969;
+	line-height:55px;
+}
+
+ul.sf-menu > li.parent > a,
+ul.sf-menu > li.parent > span {
+	
+}
+
+ul.sf-menu > li.active.parent > a,
+ul.sf-menu > li.active.parent > span {
+	background: #EEEEEE !important;
+	color: #696969;
+}
+
+ul.sf-menu > li.sfHover.parent > a,
+ul.sf-menu > li.sfHover.parent > span,
+ul.sf-menu > li.parent > a:hover,
+ul.sf-menu > li.parent > span:hover {
+	background: #EEEEEE !important;
+	color: #696969;
+}
+
+ul.sf-menu li:hover ul,
+ul.sf-menu li.sfHover ul {
+	width: auto !important;
+	z-index: 10000;
+	background: white !important;
+	border: 1px solid #cecece;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;
+}
+
+ul.sf-menu > li:hover > ul,
+ul.sf-menu > li.sfHover > ul { 
+	padding-top: 5px;
+	margin-top:15px;
+	padding-top:11px;
+	padding-left: 14px;
+	padding-right: 14px;
+}
+
+ul.sf-menu ul {
+	width: 168px;
+}
+
+ul.sf-menu ul li {}
+ul.sf-menu > li:hover > ul > li,
+ul.sf-menu > li.sfHover > ul > li {
+	color: #696969;
+	border-left: 1px solid transparent !important;
+	background: url('../../assets/menu/menulili.png') repeat-x 0% 100% !important;
+}
+
+ul.sf-menu > li:hover > ul > li:first-child,
+ul.sf-menu > li.sfHover > ul > li:first-child {
+	padding-top: 0px;
+}
+
+ul.sf-menu > li:hover > ul > li:last-child, ul.sf-menu > li.sfHover > ul > li:last-child {
+    background:none !important;
+}
+
+ul.sf-menu > li:hover > ul > li.lastItem,
+ul.sf-menu > li.sfHover > ul > li.lastItem {
+	padding-bottom: 14px;
+}
+
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left: 160px;
+	top: 0px;
+	border-left: 1px solid #5c646b;
+}
+
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left: 140px;
+	top: -0.5em;
+}
+
+ul.sf-menu ul {
+	padding: 12px 0 8px;
+}
+
+ul.sf-menu ul li a,
+ul.sf-menu ul li span {
+	display: block;
+	line-height: 32px;
+	text-align: left;
+	font-family:Oswald;
+	font-size:13px;
+}
+
+ul.sf-menu ul li a:hover,
+ul.sf-menu ul li span:hover {
+	
+}
+
+ul.sf-menu ul li:first-child a,
+ul.sf-menu ul li:first-child span {
+	background: none;
+}
+
+ul.sf-menu ul li:first-child a:hover,
+ul.sf-menu ul li:first-child span:hover {
+	
+}
+
+select.select-menu {
+	display: none;
+}
+
+.sf-menu > li > a,.sf-menu > li > span {
+	color:#4e4e4e;
+}
+
+.sf-menu > li > a:hover, .sf-menu > li > a:active, .sf-menu > li.sfHover > a, .sf-menu > li.sfHover > span, .sf-menu > li:hover > span, .sf-menu > li.current > a, .sf-menu > li.current > span, .sf-menu > li.active > a, .sf-menu > li.active > span {
+	background: #EEEEEE !important;
+}
+
+.sf-menu > li > a:hover, .sf-menu > li > a:active, .sf-menu > li.sfHover > a, .sf-menu > li.sfHover > span, .sf-menu > li:hover > span, .sf-menu > li.current > a, .sf-menu > li.current > span, .sf-menu > li.active > a, .sf-menu > li.active > span {
+	color: #696969;
+}
+
+.sf-menu ul {
+	background: #EEEEEE !important;
+	color: #696969;
+}
+
+.sf-menu ul > li > a,
+.sf-menu ul > li > span {
+	color: #696969;
+}
+
+

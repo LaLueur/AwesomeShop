@@ -38,6 +38,8 @@ gem 'rmagick'
 
 gem 'cloudinary'
 
+gem 'will_paginate'
+
 gem 'rails_12factor', group: :production
 
 group :development, :test do

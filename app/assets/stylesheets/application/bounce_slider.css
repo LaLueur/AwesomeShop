@@ -263,36 +263,36 @@ width: 455px;;
 	0%   { opacity: 1; left: 0; right: auto; }
 	100% { opacity: 0; left: 0; right: auto; }
 }
-@-keyframes toLeftAnim {
+@keyframes toLeftAnim {
 	0% { left: 5%; opacity: 1; }
 	30% { left: 10%; opacity: 1; }
 	100% { left: -50%; opacity: 0; }
 }
-@-keyframes toRightAnim {
+@keyframes toRightAnim {
 	0% { right: 5%; opacity: 1; }
 	30% { right: 10%; opacity: 1; }
 	100% { right: -50%; opacity: 0; }
 }
-@-keyframes fromLeftAnim {
+@keyframes fromLeftAnim {
 	0% { left: -50%; opacity: 0; }
 	30% { left: 10%; opacity: 1; }
 	100% { left: 5%; opacity: 1; }
 }
-@-keyframes fromRightAnim {
+@keyframes fromRightAnim {
 	0% { right: -50%; opacity: 0; }
 	30% { right: 10%; opacity: 1; }
 	100% { right: 5%; opacity: 1; }
 }
-@-keyframes fromRightAnim {
+@keyframes fromRightAnim {
 	0% { right: -50%; opacity: 0; }
 	30% { right: 10%; opacity: 1; }
 	100% { right: 5%; opacity: 1; }
 }
-@-keyframes opacityIn {
+@keyframes opacityIn {
 	0%   { opacity: 0; left: 0; right: auto; }
 	100% { opacity: 1; left: 0; right: auto; }
 }
-@-keyframes opacityOut {
+@keyframes opacityOut {
 	0%   { opacity: 1; left: 0; right: auto; }
 	100% { opacity: 0; left: 0; right: auto; }
 }

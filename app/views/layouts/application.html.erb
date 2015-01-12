@@ -43,10 +43,14 @@
 
           <ul class="account_info">
             <li><a href="#"><img alt="" src="/assets/my_account.png"> MY ACCOUNT</a></li>
-            <li><a href="wish_list.html"><img alt="" src="/assets/mywish_list.png"> MY WISHLIST</a></li>
+            <li><a href="#"><img alt="" src="/assets/mywish_list.png"> MY WISHLIST</a></li>
             <li><a href="cart.html"><img alt="" src="/assets/shopping_cart.png"> MY CART</a></li>
             <li><a href="checkout.html"><img alt="" src="/assets/checkout.png"> MY CHECKOUT</a></li>
-            <li><a href="log_in.html"><img alt="" src="/assets/log_out.png"> LOGIN</a></li>
+            <% unless current_user %>
+                <li><a href="<%= new_user_session_path %>"><img alt="" src="/assets/log_out.png"> LOGIN</a></li>
+            <% else %>
+                <li><a href="<%= destroy_user_session_path %>"><img alt="" src="/assets/log_out.png"> LOGOUT</a></li>
+            <% end %>
           </ul>
 
         </div>
@@ -64,9 +68,9 @@
           <p>Call us Monday - Saturday: 9:00 am - 6:00 pm</p>
         </div>
         <div class="cart_info span3">
-          <div class="cart_data">Shopping Cart - $0.00</div>
-          <button class="cart_btn btn btn-navbar" data-toggle="collapse" data-target=".item_cart_wrap"><img alt="" src="/assets/shopping_cart_btn_img.png"></button>
-          <div class="item_cart_content">
+          <div class="cart_data">Shopping Cart - <%= number_to_currency @cart_total %></div>
+          <button class="cart_btn btn btn-navbar"><img alt="" src="/assets/shopping_cart_btn_img.png"></button>
+          <!--div class="item_cart_content">
             <div class="item_cart_wrap collapse">
               <div class="item_cart">
                 <p class="item_cart_products">No Products</p>
@@ -76,7 +80,7 @@
                 <button class="cart">Cart</button>
               </div>
             </div>
-          </div>
+          </div-->
         </div>
       </div>
     </div>
@@ -175,7 +179,75 @@
     </ul>
   </div>
 </div>
-<%= yield %>
+
+<div class="main_content">
+
+    <%= yield %>
+
+
+</div>
+
+<div class="contact_info">
+  <div class="container main">
+    <ul class="row">
+      <li class="follow-us span4">
+        <div class="follow-social">Follow us on:</div>
+        <div class="social-icon">
+          <ul>
+            <li class="fb">
+              <a href="#"><img alt="" src="/assets/social/facebook.png"></a>
+            </li>
+            <li class="tw">
+              <a href="#"><img alt="" src="/assets/social/twitter.png"></a>
+            </li>
+            <li class="rss">
+              <a href="#"><img alt="" src="/assets/social/rss.png"></a>
+            </li>
+            <li class="yt">
+              <a href="#"><img alt="" src="/assets/social/youtube.png"></a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="span4">
+        <div class="free-shipping">
+          <div class="free-shipping-wrap">
+            <div class="free-shipping-image">
+              <img alt="" src="/assets/social/shiping-truck.png">
+            </div>
+            <div class="free-shipping-info">
+              <div id="free-shipping-info-title">
+                Free Shipping
+              </div>
+              <div id="free-shipping-info">
+                On Orders  Over $ 499
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="contact-no span4">
+        <div class="contact-no-wrap">
+          <div class="contact-no-image">
+            <img alt="" src="/assets/social/telephone.png">
+          </div>
+          <div class="contact-no-info">
+            <div id="contact-no-info-title">
+              Order Online
+            </div>
+            <br/>
+            <div id="contact-no-info">
+              <p>Phone:</p>
+              <p id="nb">1 (234) 56 78 901</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
 <div class="footer">
   <div class="footer-top">
     <div class="container main" id="footer-top">

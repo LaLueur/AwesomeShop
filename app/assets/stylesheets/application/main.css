@@ -1729,7 +1729,7 @@ text-transform:uppercase;
 .checkout_area .customer_select .returning_customer p{
 float:left;
 }
-.checkout_area .returning_customer .customer_select  input[type="text"]{
+.checkout_area .returning_customer .customer_select  input[type="text"], .checkout_area .returning_customer .customer_select  input[type="password"]{
 	background-color: #ffffff;
 	border: 1px solid #cccccc;
 	margin-left:15px;

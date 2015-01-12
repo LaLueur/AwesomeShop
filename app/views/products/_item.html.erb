@@ -1,0 +1,47 @@
+<li class="mix" data-name="Acadia" data-area="47452.80">
+  <div class="meta name">
+    <div class="img_wrapper loaded">
+      <img alt src="<%= product.image_url(:thumb) %>" onload="imgLoaded(this)">
+    </div>
+
+  </div>
+
+  <div class="product_info new-product-info">
+    <div>
+      <div class="new-product-price"><%= number_to_currency product.price %></div>
+      <div class="new-product-bg">
+        <div class="newE-product-cart_like">
+          <div class="new-product-cart_like">
+            <div class="new-product-cart"><a href="#"><img alt="" src="/assets/new-product/shoping-info/cart-image.png"></a></div>
+            <div class="new-product-like"><a href="#"><img alt="" src="/assets/new-product/shoping-info/like-img.png"></a></div>
+          </div>
+        </div>
+        <div class="new-product-details"><a href="#">Details</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="product_description product_info">
+    <div class="title"><%= product.name %></div>
+    <div class="content"><%= product.description %></div>
+  </div>
+  <div class="meta product_description">
+    <div class="title"><%= product.name %></div>
+    <div class="content"><%= product.description %></div>
+  </div>
+  <div class="meta product_description">
+    <div class="popular-product-info">
+      <div>
+        <div class="popular-product-price"><%= number_to_currency product.price %></div>
+        <div class="popular-product-bg">
+          <div class="popular-product-cart_like">
+            <div class="popular-product-cart_like">
+              <div class="popular-product-cart"><%= link_to(image_tag('new-product/shoping-info/cart-image.png'), add_to_cart_product_path(product), method: :post) %></div>
+              <div class="popular-product-like"><a href="#"><img alt="" src="/assets/new-product/shoping-info/like-img.png"></a></div>
+            </div>
+          </div>
+          <div class="popular-product-details"><a href="#">Details</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>

@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
 
-  self.per_page = 3
+  self.per_page = 2
 
   has_many :product_categories, :dependent => :destroy
   has_many :categories, through: :product_categories

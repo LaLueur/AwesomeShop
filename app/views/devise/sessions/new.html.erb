@@ -1,32 +1,66 @@
 <div class="container main">
     <div class="row">
       <div class="span9 checkout_area">
-        <h2 class="title-wrap"> Log In </h2>
+        <h2 class="title-wrap">
+          Checkout Informaiton
+        </h2>
         <div class="line"></div>
         <div id="log_in_info">
+          <h3>Step 1: <span>Checkout Information</span></h3>
           <div class="row">
-              <div class="checkout_info log_in_content span9">
-                  <div class="span4 returning_customer">
-                    <div class="customer_select">
-                      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                          <p>
-                            <%= f.label :email %>
-                            <%= f.email_field :email, autofocus: true, type: 'text', tabindex: '2', size: '42', class: 'width', name: 'email' %>
-                          </p>
+            <div class="checkout_info log_in_content span9">
 
-                          <p>
-                            <%= f.label :password %>
-                            <%= f.password_field :password, autocomplete: "off", tabindex: '2', size: '42', class: 'width', name: 'password' %>
-                          </p>
 
-                          <%= f.submit "Log in", class: 'register' %>
-                      <% end %>
-                    </div>
-                  </div>
+              <div class="span4 new_customer">
+                <h2>New Customer</h2>
+                <div class="customer_select">
+                  <p>Mauris mauris ante</p>
+                  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                      <p>
+                        <%= f.label :first_name %>
+                        <%= f.text_field :first_name, tabindex: '1', size: '42', class: 'width'%>
+                      </p>
+                      <p>
+                        <%= f.label :last_name %>
+                        <%= f.text_field :last_name, tabindex: '2', size: '42', class: 'width'%>
+                      </p>
+                    <p>
+                      <%= f.label :email %>
+                      <%= f.email_field :email, tabindex: '3', size: '42', class: 'width'%>
+                    </p>
+                    <p>
+                      <%= f.label :password %>
+                      <%= f.password_field :password, tabindex: '4', size: '42', class: 'width'%>
+                    </p>
+
+                      <%= f.button "Sign In", class: 'register' %>
+
+                  <% end %>
+              </div>
+            </div>
+
+              <div class="span4 returning_customer">
+                <h2>Returning Customer</h2>
+                <div class="customer_select">
+                  <p>I'm a returning customer</p>
+                  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                      <p>
+                        <%= f.label :email %>
+                        <%= f.email_field :email, tabindex: '1', size: '42', class: 'width'%>
+                      </p>
+
+                      <p>
+                        <%= f.label :password %>
+                        <%= f.password_field :password, tabindex: '2', size: '42', class: 'width'%>
+                      </p>
+                      <%= f.submit "Log in", class: 'register' %>
+                  <% end %>
+               </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
       </div>
 </div>
 

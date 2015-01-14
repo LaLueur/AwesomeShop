@@ -12,7 +12,7 @@
   <!-- Font CSS Link -->
 
 
-
+  <%= javascript_include_tag :defaults %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -47,9 +47,9 @@
             <li><a href="cart.html"><img alt="" src="/assets/shopping_cart.png"> MY CART</a></li>
             <li><a href="checkout.html"><img alt="" src="/assets/checkout.png"> MY CHECKOUT</a></li>
             <% unless current_user %>
-                <li><a href="<%= new_user_session_path %>"><img alt="" src="/assets/log_out.png"> LOGIN</a></li>
+                <li><a href="<%= new_user_session_path %>"><img alt="" src="/assets/log_out.png"> SIGN UP / SIGN IN</a></li>
             <% else %>
-                <li><a href="<%= destroy_user_session_path %>"><img alt="" src="/assets/log_out.png"> LOGOUT</a></li>
+                <li><a href="<%= url_for(destroy_user_session_path) %>" data-method="delete"><img alt="" src="/assets/log_out.png"> SIGN OUT</a></li>
             <% end %>
           </ul>
 
@@ -181,7 +181,12 @@
 </div>
 
 <div class="main_content">
-
+  <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
     <%= yield %>
 
 

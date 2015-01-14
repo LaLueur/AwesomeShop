@@ -469,36 +469,36 @@ header .button:hover{
 #ToGrid{
 width:11px;
 height:11px;
-background:url('../../assets/list-grid-img/grid_normal.png');
+background:url(asset-path('list-grid-img/grid_normal.png'));
 }
 #ToList{
 width:11px;
 height:11px;
-background:url('../../assets/list-grid-img/list_normal.png');
+background:url(asset-path('list-grid-img/list_normal.png'));
 margin-left: -7px;
 }
 #ToGrid1{
 width:11px;
 height:11px;
-background:url('../../assets/list-grid-img/grid_normal.png');
+background:url(asset-path('list-grid-img/grid_normal.png'));
 }
 #ToList1{
 width:11px;
 height:11px;
-background:url('../../assets/list-grid-img/list_normal.png');
+background:url(asset-path('list-grid-img/list_normal.png'));
 margin-left: -7px;
 }
 #ToGrid:hover{
-background:url('../../assets/list-grid-img/grid_hover.png');
+background:url(asset-path('list-grid-img/grid_hover.png'));
 }
 #ToList:hover{
-background:url('../../assets/list-grid-img/list_hover.png');
+background:url(asset-path('list-grid-img/list_hover.png'));
 }
 #ToGrid1:hover{
-background:url('../../assets/list-grid-img/grid_hover.png');
+background:url(asset-path('list-grid-img/grid_hover.png'));
 }
 #ToList1:hover{
-background:url('../../assets/list-grid-img/list_hover.png');
+background:url(asset-path('list-grid-img/list_hover.png'));
 }
 .select_bg_sort{
 width: 88px;
@@ -507,7 +507,7 @@ font-family: 'PT Sans', sans-serif;
 font-size: 11px;
 margin-top: 9px;
 border: none !important;
-background: url('../../assets/select_bg_sort.png') !important;
+background: url(asset-path('select_bg_sort.png')) !important;
 }
 .select_bg_pn{
 width: 57px;
@@ -516,7 +516,7 @@ font-family: 'PT Sans', sans-serif;
 font-size: 11px;
 margin-top: 9px;
 border-right: 1px solid #cecece!important;
-background: url('../../assets/select_bg_sort.png') !important;
+background: url(asset-path('select_bg_sort.png')) !important;
 }
 .button.active i:before,
 .button.active i:after{
@@ -914,7 +914,7 @@ footer p a{
 }
 
 footer p a:hover{
-	background: url(im/dots.svg) repeat-x left bottom;
+	background: url(im/dots.svg) repeat-x left bottom; //what???
 }
 
 @media screen and (max-width: 500px){	

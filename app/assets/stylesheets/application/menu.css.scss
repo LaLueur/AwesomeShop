@@ -80,7 +80,7 @@ ul.sf-menu > li:hover > ul > li,
 ul.sf-menu > li.sfHover > ul > li {
 	color: #696969;
 	border-left: 1px solid transparent !important;
-	background: url('../../assets/menu/menulili.png') repeat-x 0% 100% !important;
+	background: url(asset-path('menu/menulili.png')) repeat-x 0% 100% !important;
 }
 
 ul.sf-menu > li:hover > ul > li:first-child,

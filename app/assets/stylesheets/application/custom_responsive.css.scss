@@ -291,7 +291,7 @@ height: 83px;
 .new {
 width: 54px;
 height: 54px;
-background: url('../../assets/new.png') no-repeat;
+background: url(asset-path('new.png')) no-repeat;
 margin-top: 11px;
 margin-left: 104px;
 }
@@ -880,7 +880,7 @@ margin-top: -36px!important;
 float: left;
 width: 68px;
 height: 33px;
-background: url('../../assets/new-product/shoping-info/cart-info.png');
+background: url(asset-path('new-product/shoping-info/cart-info.png'));
 }
 .single .popular-product-cart img {
 margin: 9px 0px 0px 8px !important;
@@ -1460,7 +1460,7 @@ margin-top: 10px;
 line-height: 20px;
 margin-left: 1px;
 border: none !important;
-background: #fff url('../../assets/select_bg_arrow.png') 92% 52% no-repeat !important;
+background: #fff url(asset-path('select_bg_arrow.png')) 92% 52% no-repeat !important;
 appearence: none;
 -webkit-appearance: none;
 -mox-appearance: none;
@@ -1475,7 +1475,7 @@ margin-left: -35px;
 }
 .en {
 float: left;
-background: url('../../assets/language-bg.png') !important;
+background: url(asset-path('language-bg.png')) !important;
 margin-left: 4px;
 margin-top: 10px;
 width: 26px;
@@ -1526,7 +1526,7 @@ margin-top: 14px !important;
 float: left;
 width: 68px;
 height: 33px;
-background: url('../../assets/new-product/shoping-info/cart-info.png');
+background: url(asset-path('new-product/shoping-info/cart-info.png'));
 }
 .single #Parks.list .img_wrapper {
 margin-bottom: 20px;

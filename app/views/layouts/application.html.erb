@@ -44,7 +44,7 @@
           <ul class="account_info">
             <li><a href="#"><img alt="" src="/assets/my_account.png"> MY ACCOUNT</a></li>
             <li><a href="#"><img alt="" src="/assets/mywish_list.png"> MY WISHLIST</a></li>
-            <li><a href="cart.html"><img alt="" src="/assets/shopping_cart.png"> MY CART</a></li>
+            <li><a href="<%= show_cart_path %>"><img alt="" src="/assets/shopping_cart.png"> MY CART</a></li>
             <li><a href="checkout.html"><img alt="" src="/assets/checkout.png"> MY CHECKOUT</a></li>
             <% unless current_user %>
                 <li><a href="<%= new_user_session_path %>"><img alt="" src="/assets/log_out.png"> SIGN UP / SIGN IN</a></li>

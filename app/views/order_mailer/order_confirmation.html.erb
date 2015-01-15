@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Welcome to AwesomeShop, <%= @order.user.first_name + @order.user.last_name %></h1>
+<p>
+  You have successfully completed order,
+  your Order ID is: <%= @order.id %>.<br>
+</p>
+<p>Thanks for ordering and have a great day!</p>
+</body>
+</html>

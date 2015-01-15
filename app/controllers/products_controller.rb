@@ -8,6 +8,20 @@ class ProductsController < ApplicationController
 
   end
 
+  def show_cart
+    @products = []
+    if cookies[:cart].present?
+      product_ids = cookies[:cart].split(',')
+      uniq_product_ids = product_ids.uniq
+      uniq_product_ids.each do |product_id|
+        product = Product.find(product_id)
+        quantity = product_ids.count(product_id)
+        @products << [product, quantity]
+      end
+    end
+
+  end
+
   def add_to_cart
 
     product_id = params[:id]
@@ -21,6 +35,14 @@ class ProductsController < ApplicationController
     end
 
     redirect_to :back
+
+  end
+
+  def clear_cart
+
+    cookies[:cart] = nil
+
+    redirect_to root_path
 
   end
 

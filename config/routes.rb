@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'cart' => 'products#show_cart', as: :show_cart
+  delete 'clear_cart' => 'products#clear_cart', as: :clear_cart
+  resources :orders, only: [:create]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

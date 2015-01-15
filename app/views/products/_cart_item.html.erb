@@ -1,0 +1,35 @@
+<div class="cart_area_list">
+  <div class="cart_area_content">
+    <div class="row" id="<%= product.id %>">
+      <div class="span3 cart_remove">
+        <p><input type="checkbox" value="product1" name="product1" disabled="disabled" title="Under development"></p>
+      </div>
+      <div class="span2 cart_image">
+        <%= image_tag product.image_url(:small) %>
+      </div>
+      <div class="span2 cart_product_name">
+        <p><%= product.name %></p>
+      </div>
+      <div class="span2 cart_quantity">
+        <p>
+          <%= quantity %>
+          <!--select class="qnt">
+            <option value="1">0</option>
+            <option value="2">1</option>
+            <option value="3">2</option>
+            <option value="4">3</option>
+            <option value="5">4</option>
+            <option value="6">5</option>
+            <option value="7">6</option>
+            <option value="8">7</option>
+            <option value="9">8</option>
+            <option value="10">9</option>
+          </select-->
+        </p>
+      </div>
+      <div class="span3 cart_total_price">
+        <p><%= number_to_currency product.price*quantity %></p>
+      </div>
+    </div>
+  </div>
+</div>

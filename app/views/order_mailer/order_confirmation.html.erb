@@ -4,11 +4,15 @@
   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
 </head>
 <body>
-<h1>Welcome to AwesomeShop, <%= @order.user.first_name + @order.user.last_name %></h1>
+<h1>Welcome to AwesomeShop, <%= @order.user.first_name %></h1>
 <p>
   You have successfully completed order,
-  your Order ID is: <%= @order.id %>.<br>
+  your Order ID is: <%= @order.id %>. <br>
+  Total cost is <%= number_to_currency @order.total_cost%>. <br>
 </p>
 <p>Thanks for ordering and have a great day!</p>
 </body>
 </html>
+
+
+

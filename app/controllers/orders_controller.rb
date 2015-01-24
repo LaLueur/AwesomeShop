@@ -27,7 +27,7 @@ class OrdersController < ApplicationController
       item_set.save
     end
 
-    #OrderMailer.order_confirmation(order).deliver_later
+    OrderMailer.delay.order_confirmation(order)
 
     cookies[:cart] = nil
 

@@ -12,8 +12,8 @@
       <div class="new-product-bg">
         <div class="newE-product-cart_like">
           <div class="new-product-cart_like">
-            <div class="new-product-cart"><a href="#"><img alt="" src="/assets/new-product/shoping-info/cart-image.png"></a></div>
-            <div class="new-product-like"><a href="#"><img alt="" src="/assets/new-product/shoping-info/like-img.png"></a></div>
+            <div class="new-product-cart"><%= link_to(image_tag('new-product/shoping-info/cart-image.png'), add_to_cart_product_path(product), method: :post) %></div>
+            <div class="new-product-like"><%= link_to(image_tag('new-product/shoping-info/like-img.png')) %></div>
           </div>
         </div>
         <div class="new-product-details"><a href="#">Details</a></div>
@@ -36,7 +36,7 @@
           <div class="popular-product-cart_like">
             <div class="popular-product-cart_like">
               <div class="popular-product-cart"><%= link_to(image_tag('new-product/shoping-info/cart-image.png'), add_to_cart_product_path(product), method: :post) %></div>
-              <div class="popular-product-like"><a href="#"><img alt="" src="/assets/new-product/shoping-info/like-img.png"></a></div>
+              <div class="popular-product-like"><%= link_to(image_tag('new-product/shoping-info/like-img.png')) %></div>
             </div>
           </div>
           <div class="popular-product-details"><a href="#">Details</a></div>

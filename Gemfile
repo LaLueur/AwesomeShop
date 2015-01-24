@@ -40,6 +40,9 @@ gem 'cloudinary'
 
 gem 'will_paginate'
 
+gem 'delayed_job'
+gem 'delayed_job_active_record'
+
 gem 'rails_12factor', group: :production
 
 group :development, :test do
